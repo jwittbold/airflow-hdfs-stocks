@@ -61,7 +61,6 @@ hdfs_dir = '/stock_data'
 hdfs_full_path = 'hdfs://localhost:9000/stock_data/*.csv'
 
 
-
 ########################################################################
 ########################     STOCK SCHEMA       ########################
 ########################################################################
@@ -73,15 +72,13 @@ yf_stock_schema = StructType([StructField('date_time', StringType(), True),
                             StructField('low', DecimalType(precision=17, scale=14), True),
                             StructField('close', DecimalType(precision=17, scale=14), True),
                             StructField('adj_close', DecimalType(precision=17, scale=14), True),
-                            StructField('volume', IntegerType(), True)
-                            
+                            StructField('volume', IntegerType(), True)                         
 ])
 
 
 ########################################################################
 ########################       FUNCTIONS        ########################
 ########################################################################
-
 
 
 def download_stock_data(symbol: str, destination: str):
@@ -108,7 +105,6 @@ def query(hdfs_path: str):
     stock_data_df.show(truncate=False)
 
     stock_data_df.select('high').summary('min','max').show()
-
 
 
 ########################################################################
