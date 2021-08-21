@@ -54,6 +54,7 @@ def query(hdfs_path: str):
 
     stock_data_df.select('high').summary('min','max').show()
 
+    spark.stop()
 
 if __name__ == '__main__':
 
