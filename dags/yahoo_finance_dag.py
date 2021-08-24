@@ -114,7 +114,7 @@ t4 = BashOperator(
 # run Spark query on (all) stock data in HDFS to return min/max prices for the day
 t5 = SparkSubmitOperator(
     task_id='spark_submit_query',
-    application='~/airflow/dags/spark_jobs/spark_query_stocks.py',
+    application='airflow/dags/spark_jobs/spark_query_stocks.py',
     conn_id='spark_default',
     dag=yf_stock_dag
 )
