@@ -21,7 +21,7 @@ today_EDT_str = today_EDT.strftime('%Y-%m-%d')
 
 custom_args = {
     'owner': 'Jack Wittbold',
-    'email': ['jwittbold@gmail.com'],
+    'email': ['airflow.job.status@gmail.com'],
     'email_on_failure': True,
     'email_on_success': True,
     'retries': 2,
